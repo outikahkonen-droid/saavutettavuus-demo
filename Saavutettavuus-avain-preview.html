@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Opettajan vastausavain</title>
+<style>body{font-family:Arial,sans-serif;max-width:1050px;margin:40px auto;padding:0 20px;color:#24312d;line-height:1.5}table{width:100%;border-collapse:collapse;margin-top:20px}th,td{border:1px solid #bbb;padding:10px;vertical-align:top}th{background:#e9f3ef;text-align:left}h1,h2{color:#214e44}.note{background:#fff7e3;border-left:5px solid #9a7200;padding:12px}</style></head>
+<body>
+<h1>Saavutettavuusdemon opettajan vastausavain</h1>
+<p>Demo 1 on tarkoituksella rakennettu uskottavan näköiseksi mutta saavutettavuudeltaan puutteelliseksi. Demo 2 näyttää saman tyyppisen sivun korjattuna. Tarkoitus ei ole väittää, että tämä olisi täydellinen WCAG-auditointi, vaan käyttää sivuja opetuksessa.</p>
+
+<div class="note"><strong>Webinaarivinkki:</strong> Avaa ensin Demo 1. Pyydä osallistujia etsimään 3 ongelmaa silmämääräisesti. Sen jälkeen tee Tab-testi, 200 % suurennus ja WAVE-pikatesti. Avaa vasta sitten Demo 2.</div>
+
+<h2>Keskeiset erot</h2>
+<table>
+<tr><th>Teema</th><th>Demo 1: ongelma</th><th>Käyttäjävaikutus</th><th>Demo 2: korjaus</th></tr>
+<tr><td>Kontrasti</td><td>Vaaleanharmaa teksti ja vaaleat navigointilinkit.</td><td>Teksti voi olla vaikea lukea heikkonäköiselle tai kirkkaassa auringonvalossa.</td><td>Tummempi teksti ja linkit, selvästi parempi kontrasti.</td></tr>
+<tr><td>Otsikkorakenne</td><td>“Esteettömyys” on vain visuaalisesti suuri kappale, ei oikea otsikkoelementti.</td><td>Ruudunlukijan otsikkonavigointi ei muodosta loogista rakennetta.</td><td>Looginen H1–H2–H3-hierarkia.</td></tr>
+<tr><td>ALT-tekstit</td><td>Yksi kuva ilman altia, yksi tiedostonimellä, yksi liian epämääräisesti (“nainen”).</td><td>Kuvan tarkoitus ei välity ruudunlukijalle.</td><td>ALT kertoo kuvan olennaisen tehtävän ja sisällön.</td></tr>
+<tr><td>Linkkitekstit</td><td>Toistuvat “Lue lisää” ja “tästä”.</td><td>Linkkilista ei kerro, minne linkit johtavat.</td><td>Kuvaavat linkit, kuten “Lue lisää kuntoutuspalveluista”.</td></tr>
+<tr><td>Esteettömyystieto</td><td>“Kohteemme sopii kaikille.”</td><td>Asiakas ei pysty arvioimaan, sopiiko kohde hänen tarpeisiinsa.</td><td>Konkreettiset tiedot etäisyydestä, luiskasta, ovesta, kynnyksestä ja WC:stä.</td></tr>
+<tr><td>Väri ainoana keinona</td><td>Saatavuus näkyy vihreänä/punaisena tekstinä.</td><td>Värisokea tai ruudunlukijan käyttäjä voi menettää tiedon.</td><td>Saatavuus ilmaistaan tekstinä.</td></tr>
+<tr><td>Näppäimistökohdistus</td><td>Focus-kehys on poistettu CSS:llä.</td><td>Näppäimistökäyttäjä ei näe, missä kohdassa sivua on.</td><td>Selkeä näkyvä focus-kehys linkeissä, lomakkeissa ja painikkeissa.</td></tr>
+<tr><td>Automaattinen liike</td><td>Tarjouslaatikko vilkkuu/pulssittaa.</td><td>Voi häiritä keskittymistä ja aiheuttaa oireita herkille käyttäjille.</td><td>Staattinen ilmoitus ilman automaattista liikettä.</td></tr>
+<tr><td>Lomakkeen nimet</td><td>Kentät käyttävät vain placeholder-tekstiä.</td><td>Ohje katoaa kirjoitettaessa eikä kentän nimeä ole välttämättä ohjelmallisesti yhdistetty.</td><td>Näkyvät label-elementit ja ohjetekstit.</td></tr>
+<tr><td>Virheilmoitus</td><td>Pelkkä “Virhe!”.</td><td>Käyttäjä ei tiedä, missä virhe on tai miten se korjataan.</td><td>Täsmällinen virheilmoitus ja korjausohje.</td></tr>
+<tr><td>Arkaluonteiset tiedot</td><td>Textarea pyytää diagnooseja tavallisessa yhteydenottolomakkeessa.</td><td>Tietosuojariski ja väärä asiointikanava.</td><td>Ohje olla kirjoittamatta terveystietoja ja käyttää tarvittaessa suojattua kanavaa.</td></tr>
+<tr><td>Mobiili / reflow</td><td>.nowrap-elementti pakottaa mobiilissa 760 px leveyden.</td><td>Syntyy vaakavieritystä ja sisältöä voi jäädä näkymän ulkopuolelle.</td><td>Sisältö mukautuu ilman pakotettua leveyttä.</td></tr>
+</table>
+
+<h2>Ehdotettu demo webinaarissa</h2>
+<ol>
+<li>Kysy ensin: “Näyttääkö tämä sivu ensisilmäyksellä ihan tavalliselta?”</li>
+<li>Pyydä osallistujia etsimään kolme ongelmaa ilman työkaluja.</li>
+<li>Tee Tab-testi. Demo 1: kohdistus ei näy.</li>
+<li>Suurenna 200 %. Kavenna ikkuna mobiilileveyteen. Demo 1: vaakavieritys tulee esiin.</li>
+<li>Aja WAVE. Keskustele siitä, mitä automaattityökalu löytää ja mitä ei.</li>
+<li>Avaa Demo 2 ja vertaa samoja kohtia.</li>
+<li>Lopeta kysymykseen: “Kumpi sivu on brändiltään heikompi?” Tavoite on huomata, ettei saavutettava versio tarvitse olla visuaalisesti tylsä.</li>
+</ol>
+</body></html>
